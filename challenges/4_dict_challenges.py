@@ -103,7 +103,9 @@ for key, value in inventory.items():
 
 defaults   = {"theme": "light", "lang": "en", "debug": False}
 user_prefs = {"theme": "dark", "lang": "fr"}
-# your code here
+
+final = defaults | user_prefs
+print(final)
 
 
 # --------------------------------------------------------------
@@ -114,7 +116,9 @@ user_prefs = {"theme": "dark", "lang": "fr"}
 # --------------------------------------------------------------
 
 subjects = ["math", "science", "history", "art"]
-# your code here
+
+result = dict.fromkeys(subjects, 0)
+print(result)
 
 
 # --------------------------------------------------------------
@@ -126,7 +130,10 @@ subjects = ["math", "science", "history", "art"]
 
 words = ["apple", "banana", "apple", "cherry", "banana", "apple"]
 count = {}
-# your code here
+
+for word in words:
+    count[word] = count.get(word, 0) + 1
+print(count)
 
 
 # --------------------------------------------------------------
@@ -137,7 +144,10 @@ count = {}
 # --------------------------------------------------------------
 
 scores = {"Bob": 88, "Alice": 95, "Charlie": 72, "Diana": 90}
-# your code here
+
+new_sorted = dict(sorted(scores.items(), key=lambda item: item[1], reverse=True))
+
+print(new_sorted)
 
 
 # ============================================================
